@@ -1,0 +1,19 @@
+{
+    "name": "thiago-camelo/bitkeys",
+    "type": "project",
+    "require": {
+        "phpseclib/phpseclib": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ThiagoCamelo\\Bitkeys\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thiago Camelo",
+            "email": "ti.thiagocamelo@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
