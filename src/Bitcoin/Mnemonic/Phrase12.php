@@ -12,10 +12,13 @@ class Phrase12 implements PhraseInterface
 {
     private array $wordlist;
     private array $words;
+    private string $passPhrase;
+    
 
-    public function __construct(WordListInterface $wordlist, EntropyInterface $entropy)
+    public function __construct(WordListInterface $wordlist, EntropyInterface $entropy, string $passPhrase = '')
     {
         $this->wordlist = $wordlist->getWords();
+        $this->passPhrase = $passPhrase;
         $this->setEntropy($entropy);
     }
 
@@ -33,5 +36,9 @@ class Phrase12 implements PhraseInterface
     }
 
     // getKeyPair > implementar
+    public function getSeed(): string
+    {
+        return hash_pbkdf2('sha512', $this->getMnemonic(), 'mnemonic' . $this->passPhrase, 2048, 64);
+    }
 
 }

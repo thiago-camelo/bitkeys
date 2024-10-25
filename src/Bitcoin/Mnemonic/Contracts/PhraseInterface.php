@@ -7,4 +7,5 @@ namespace ThiagoCamelo\Bitkeys\Bitcoin\Mnemonic\Contracts;
 interface PhraseInterface
 {
     public function getMnemonic(): string;
+    public function getSeed(): string;
 }
