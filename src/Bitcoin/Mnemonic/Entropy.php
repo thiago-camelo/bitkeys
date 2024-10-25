@@ -3,7 +3,9 @@ declare(strict_types=1);
 
 namespace ThiagoCamelo\Bitkeys\Bitcoin\Mnemonic;
 
-class Entropy
+use ThiagoCamelo\Bitkeys\Bitcoin\Mnemonic\Contracts\EntropyInterface;
+
+class Entropy implements EntropyInterface
 {
     private string $entropy;
 

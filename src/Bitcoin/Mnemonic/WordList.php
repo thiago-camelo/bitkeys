@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace ThiagoCamelo\Bitkeys\Bitcoin\Mnemonic;
 
-class WordList
+use ThiagoCamelo\Bitkeys\Bitcoin\Mnemonic\Contracts\WordListInterface;
+
+class WordList implements WordListInterface
 {
     private array $wordlist;
     
